@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐릭터 이름 생성기</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>캐릭터 이름 생성기</h1>
+            <p>작품의 시대, 배경, 인물의 성격을 입력하면 AI가 어울리는 이름을 추천해줍니다.</p>
+        </header>
+        <main>
+            <form id="name-form">
+                <div class="form-group">
+                    <label for="year">작품 년도</label>
+                    <input type="text" id="year" name="year" placeholder="예: 2025년, 19세기 조선" required>
+                </div>
+                <div class="form-group">
+                    <label for="background">작품 배경</label>
+                    <input type="text" id="background" name="background" placeholder="예: 현대 서울, 중세 판타지 왕국" required>
+                </div>
+                <div class="form-group">
+                    <label for="personality">인물 성격</label>
+                    <textarea id="personality" name="personality" rows="4" placeholder="예: 활발하고 긍정적이며 친구를 아낌, 차갑지만 내면은 따뜻함" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="gender">인물 성별</label>
+                    <select id="gender" name="gender">
+                        <option value="남자">남자</option>
+                        <option value="여자">여자</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">나이</label>
+                    <input type="text" id="age" name="age" placeholder="예: 20대, 17세" required>
+                </div>
+                <div class="form-group">
+                    <label for="situation">처한 상황</label>
+                    <textarea id="situation" name="situation" rows="4" placeholder="예: 낯선 세계에 떨어져 집으로 돌아가야 함, 오랜 꿈이었던 대회 출전을 앞두고 있음" required></textarea>
+                </div>
+                <button type="submit" id="generate-btn">이름 생성하기</button>
+            </form>
+            <div id="loading" class="hidden">
+                <p>AI가 멋진 이름을 만들고 있어요...</p>
+            </div>
+            <div id="results-container">
+                <h2>생성된 이름:</h2>
+                <div id="results">
+                    <p class="placeholder">이곳에 생성된 이름이 표시됩니다.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

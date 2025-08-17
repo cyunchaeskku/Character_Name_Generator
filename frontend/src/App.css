@@ -1,0 +1,121 @@
+.gradient-text {
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Override React-Bootstrap default styles for dark mode */
+.form-control {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+  border: 1px solid #ced4da !important;
+  padding: 0.75rem 1rem !important;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(137, 179, 248, 0.25) !important;
+  border-color: var(--gradient-start) !important;
+}
+
+.form-control::placeholder {
+  color: #888 !important;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)) !important;
+  border: none !important;
+  transition: transform 0.2s ease-in-out !important;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+}
+
+.btn-primary:disabled {
+  background: #555 !important;
+  opacity: 0.7 !important;
+}
+
+.alert-danger {
+  background-color: #4d1f21 !important;
+  color: #f8d7da !important;
+  border-color: #8c2c32 !important;
+}
+
+.results-card {
+  background-color: #f8f9fa;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-top: 3rem;
+  border: 1px solid #dee2e6;
+}
+
+.list-group-item {
+  background-color: transparent !important;
+  color: #212529 !important;
+  border-color: #dee2e6 !important;
+}
+
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1050; /* Ensure it's above the sidebar */
+  background: none !important;
+  border: none !important;
+  color: var(--text-color) !important;
+  padding: 5px !important;
+  line-height: 1;
+}
+
+.sidebar-toggle-btn:hover,
+.sidebar-toggle-btn:focus {
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+/* Badge readability improvements */
+.results-card .badge {
+  font-size: 0.95rem;
+  padding: 0.5em 0.75em;
+}
+
+.badge-as-button {
+  border: none;
+}
+
+/* Breadcrumb custom styles */
+.breadcrumb {
+  --bs-breadcrumb-divider: '→';
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb-item {
+  cursor: pointer;
+}
+
+.breadcrumb-item:not(.active) {
+  color: #adb5bd;
+}
+
+.breadcrumb-item:not(.active):hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #fff;
+}
+
+.reset-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: #6c757d;
+}
+.reset-btn:hover {
+  color: #212529;
+}
